@@ -21,7 +21,7 @@ workflows:
       - build
   build_and_test_2:
     jobs:
-      - build
+      - build:
           filters:
             branches:
-              ignore: [production]
+              only: [production]
