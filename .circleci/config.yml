@@ -19,3 +19,6 @@ workflows:
   build_and_test:
     jobs:
       - build
+  build_and_test_2:
+    jobs:
+      - build
