@@ -8,12 +8,12 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - v1-dependencies-{{ checksum "app/yarn.lock" }}
+            - v1-dependencies-{{ checksum "yarn.lock" }}
       - run: yarn install
       - save_cache:
           paths:
             - node_modules
-          key: v1-dependencies-{{ checksum "app/yarn.lock" }}
+          key: v1-dependencies-{{ checksum "yarn.lock" }}
   build_and_push_image:
     docker:
       - image: docker:18.09.0
